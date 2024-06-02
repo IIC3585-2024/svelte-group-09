@@ -1,7 +1,7 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import Activites from './Activities.svelte';
+	import Map from './Map.svelte';
+	export let data;
 </script>
 
 <svelte:head>
@@ -10,50 +10,24 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+	<div 
+	class="pl-10 pt-8 h-64 mt-4 bg-cover bg-[url('https://i.pinimg.com/originals/b7/70/4f/b7704f15d9d9c7d9ed3b2f828f7f10a3.jpg')]"
+	>
+		<p class='text-pink-400 w-16 h-8 p-1 bg-white text-center'>Chile</p>
+		<p class='text-white font-bold text-7xl mt-3 font-serif'>Santiago de Chile</p>
+	</div>
 
-		to your new<br />SvelteKit app
-	</h1>
+	<section class="flex">
+		<div class="w-1/3">
+			<Activites {data} />
+		</div>
+		<div class="w-2/3 p-5">
+			<Map {data} />
+		</div>
+	</section>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
 </section>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+	
 </style>
