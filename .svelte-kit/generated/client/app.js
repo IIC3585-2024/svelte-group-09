@@ -11,8 +11,7 @@ export const server_loads = [0];
 
 export const dictionary = {
 		"/": [2],
-		"/favourite": [3],
-		"/api/getOpenAiDescription": [4]
+		"/favourite": [3]
 	};
 
 export const hooks = {
