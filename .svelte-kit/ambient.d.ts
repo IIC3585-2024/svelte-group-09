@@ -26,6 +26,7 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const EVENT_API_TOKEN: string;
 	export const NVM_INC: string;
 	export const MANPATH: string;
 	export const TERM_PROGRAM: string;
@@ -44,7 +45,6 @@ declare module '$env/static/private' {
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const MallocNanoZone: string;
 	export const COLOR: string;
-	export const TERM_SESSION_ID: string;
 	export const npm_config_noproxy: string;
 	export const npm_config_local_prefix: string;
 	export const NVM_DIR: string;
@@ -88,15 +88,14 @@ declare module '$env/static/private' {
 	export const LOGNAME: string;
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
-	export const LC_CTYPE: string;
+	export const BUN_INSTALL: string;
 	export const NVM_BIN: string;
 	export const CONDA_DEFAULT_ENV: string;
-	export const BUN_INSTALL: string;
 	export const npm_config_user_agent: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const GIT_ASKPASS: string;
-	export const HOMEBREW_CELLAR: string;
 	export const INFOPATH: string;
+	export const HOMEBREW_CELLAR: string;
 	export const SECURITYSESSIONID: string;
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
@@ -133,6 +132,7 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		EVENT_API_TOKEN: string;
 		NVM_INC: string;
 		MANPATH: string;
 		TERM_PROGRAM: string;
@@ -151,7 +151,6 @@ declare module '$env/dynamic/private' {
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		MallocNanoZone: string;
 		COLOR: string;
-		TERM_SESSION_ID: string;
 		npm_config_noproxy: string;
 		npm_config_local_prefix: string;
 		NVM_DIR: string;
@@ -195,15 +194,14 @@ declare module '$env/dynamic/private' {
 		LOGNAME: string;
 		npm_lifecycle_script: string;
 		VSCODE_GIT_IPC_HANDLE: string;
-		LC_CTYPE: string;
+		BUN_INSTALL: string;
 		NVM_BIN: string;
 		CONDA_DEFAULT_ENV: string;
-		BUN_INSTALL: string;
 		npm_config_user_agent: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		GIT_ASKPASS: string;
-		HOMEBREW_CELLAR: string;
 		INFOPATH: string;
+		HOMEBREW_CELLAR: string;
 		SECURITYSESSIONID: string;
 		npm_node_execpath: string;
 		npm_config_prefix: string;
