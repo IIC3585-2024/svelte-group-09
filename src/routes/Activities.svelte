@@ -3,6 +3,7 @@
   import FaHeart from 'svelte-icons/fa/FaHeart.svelte';
   import FaRegHeart from 'svelte-icons/fa/FaRegHeart.svelte';
   import { fly } from 'svelte/transition';
+  import {getOpenAiDescription} from './api/getOpenAiDescription';
 
   export let data;
   let map;
@@ -59,7 +60,7 @@
   async function handleActivityClick(activity) {
     selectedActivity = activity;
     openAiDescription = '';  // Clear previous description
-    const response = await fetch('/api/getOpenAiDescription', {
+    const response = await fetch('./api/getOpenAiDescription', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

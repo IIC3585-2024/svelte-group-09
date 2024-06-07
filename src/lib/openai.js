@@ -1,4 +1,4 @@
-import { OPENAI_API_KEY } from '$env/static/private';
+//import { OPENAI_API_KEY } from '$env/static/private';
 
 export async function getOpenAiDescription(activity) {
   const prompt = `Proporciona una descripción detallada de la actividad "${activity.title}". Incluye información sobre seguridad y equipamiento necesario.`;
@@ -7,7 +7,7 @@ export async function getOpenAiDescription(activity) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${OPENAI_API_KEY}`
+      'Authorization': `Bearer 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`
     },
     body: JSON.stringify({
       model: 'text-davinci-003',

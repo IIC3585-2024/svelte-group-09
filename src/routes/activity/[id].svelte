@@ -1,5 +1,5 @@
 <script context="module">
-  import { getOpenAiDescription } from '$lib/openai';
+  import { getOpenAiDescription } from '$api/getOpenAiDescription';
 
   export async function load({ params, fetch }) {
     const res = await fetch(`https://api.predicthq.com/v1/events/${params.id}`, {
