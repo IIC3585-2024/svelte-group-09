@@ -27,6 +27,7 @@
  */
 declare module '$env/static/private' {
 	export const EVENT_API_TOKEN: string;
+	export const OPENAI_API_KEY: string;
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
@@ -142,6 +143,7 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		EVENT_API_TOKEN: string;
+		OPENAI_API_KEY: string;
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
